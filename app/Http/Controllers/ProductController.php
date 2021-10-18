@@ -47,7 +47,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $product = Product::create($request->only([
-            'name', 'descreption', 'discount', 'Weight', 'price','country_id','category_id','discount_id'
+            'name', 'descreption', 'discount', 'Weight', 'price','country','category_id','discount_id','shipping', 'rate','vat'
         ]));
 
         // return new productResource($product);

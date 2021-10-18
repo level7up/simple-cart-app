@@ -23,4 +23,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\ProductController::class, 'home'])->name('products');
 Route::post('/add_to_cart', [App\Http\Controllers\CartController::class, 'addToCart']);
 Route::get('/cart', [App\Http\Controllers\CartController::class, 'index']);
+Route::get('/remove/{id}', [App\Http\Controllers\CartController::class, 'remove']);
+Route::get('/checkout', [App\Http\Controllers\CartController::class, 'checkout']);
 

@@ -15,7 +15,10 @@ class Product extends Model
         'discount',
         'Weight',
         'price',
-        'country_id',
+        'country',
+        'rate',
+        'vat',
+        'shipping',
         'category_id',
         'discount_id',
     ];

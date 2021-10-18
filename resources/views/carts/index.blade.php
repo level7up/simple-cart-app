@@ -241,7 +241,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Home') }}</div>
+                <div class="card-header">{{ __('Cart') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -265,7 +265,8 @@
                                             <th>Product Name</th>
                                             <th class="text-center">Price</th>
                                             <th class="text-center">Discount</th>
-                                            <th class="text-center">subtotal</th>
+                                            <th class="text-center">Subtotal</th>
+                                            <th class="text-center">Remove</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -273,7 +274,7 @@
                                             <tr>
                                                 <td>
                                                     <div class="product-item">
-                                                        <a class="product-thumb" href="#"><img src="https://img1.g-star.com/product/c_fill,f_auto,h_630,q_80/v1614686111/D14143-336-6484-M05/g-star-raw-raw-graphic-slim-t-shirt-black.jpg" alt="Product"></a>
+                                                        <a class="product-thumb" href="#"><img src="https://www.pinclipart.com/picdir/middle/336-3369464_reddish-orange-circle-with-the-words-new-item.png" alt="Product"></a>
                                                         <div class="product-info">
                                                             <h4 class="product-title"><a href="#">{{$product->name}}</a></h4><span><em>Size:</em> 10.5</span><span><em>Color:</em> Dark Blue</span>
                                                         </div>
@@ -283,6 +284,7 @@
                                                 <td class="text-center text-lg text-medium">${{$product->price}}</td>
                                                 <td class="text-center text-lg text-medium">${{$product->discount}}</td>
                                                 <td class="text-center text-lg text-medium">{{number_format($summ[]= $product->price -($product->price * $product->discount /100),1) }}</td>
+                                                <td class="btn btn-warning"><a href="/remove/{{$product->cart_id}}">Remove </a></td>
                                             </tr>
                                         @endforeach
 
@@ -294,8 +296,8 @@
                                 <div class="column text-lg">Subtotal: <span class="text-medium">{{array_sum($summ)}}</span></div>
                             </div>
                             <div class="shopping-cart-footer">
-                                <div class="column"><a class="btn btn-outline-secondary" href="#"><i class="icon-arrow-left"></i>&nbsp;Back to Shopping</a></div>
-                                <div class="column"><a class="btn btn-primary" href="#" data-toast="" data-toast-type="success" data-toast-position="topRight" data-toast-icon="icon-circle-check" data-toast-title="Your cart" data-toast-message="is updated successfully!">Update Cart</a><a class="btn btn-success" href="#">Checkout</a></div>
+                                <div class="column"><a class="btn btn-outline-secondary" href="/home"><i class="icon-arrow-left"></i>&nbsp;Back to Shopping</a></div>
+                                <div class="column"><a class="btn btn-success" href="checkout">Checkout</a></div>
                             </div>
                         </div>
 

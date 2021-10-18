@@ -21,7 +21,10 @@ class ProductResource extends JsonResource
             'discount'=> $this->discount,
             'Weight'=> $this->Weight,
             'price'=> $this->price,
-            'country_id'=> $this->country_id,
+            'country'=> $this->country,
+            'vat'=> $this->vat,
+            'rate'=> $this->rate,
+            'shipping'=>$this->shipping,
             'category_id'=> $this->category_id,
             'discount_id'=> $this->discount_id,
 

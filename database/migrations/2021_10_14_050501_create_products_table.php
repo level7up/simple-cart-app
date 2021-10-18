@@ -20,11 +20,14 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('descreption');
+            $table->string('country');
             $table->float('discount', 10, 4);
             $table->float('Weight', 10, 4);
             $table->float('price', 10, 4);
-            
-            $table->foreignId('country_id')->constrained('countries');
+            $table->float('rate',10,4);
+            $table->float('shipping',10,4);
+            $table->float('vat',10,4);
+
             $table->foreignId('category_id')->constrained('categories');
             $table->foreignId('discount_id')->constrained('discounts');
 

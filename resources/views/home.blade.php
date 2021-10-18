@@ -28,7 +28,7 @@
                                             <div class="single-product">
                                                 <div class="product-img">
                                                     <a href="{{url('posts/'. $product['id'] .'')}}">
-                                                        <img class="default-img"width="150px" src="https://assets.ajio.com/medias/sys_master/root/20210403/GEud/606885be7cdb8c1f14774922/-473Wx593H-461575169-maroon-MODEL.jpg" alt="#">
+                                                        <img class="default-img" width="150px" src="https://www.pinclipart.com/picdir/middle/336-3369464_reddish-orange-circle-with-the-words-new-item.png" alt="#">
                                                     </a>
                                                     <div class="button-head">
                                                         <div class="product-action">
